@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <div class="guessing-game">
+        <div><h1>Make a Guess</h1></div>
+        <div class="screen">
+          <span id="random-number-screen"></span>
+        </div>
+        <div class="myguess">
+          <span id="myguess" style="color: white"></span>
+        </div>
+        <div class="digits-btn">
+          <button onclick="crossCheck(this)" value="0">0</button>
+          <button onclick="crossCheck(this)" value="1">1</button>
+          <button onclick="crossCheck(this)" value="2">2</button>
+          <button onclick="crossCheck(this)" value="3">3</button>
+          <button onclick="crossCheck(this)" value="4">4</button>
+          <button onclick="crossCheck(this)" value="5">5</button>
+          <button onclick="crossCheck(this)" value="6">6</button>
+          <button onclick="crossCheck(this)" value="7">7</button>
+          <button onclick="crossCheck(this)" value="8">8</button>
+          <button onclick="crossCheck(this)" value="9">9</button>
+          <button onclick="crossCheck(this)" value="10">10</button>
+          <button onclick="reset(this)" value="reset">RESET</button>
+        </div>
+        <div class="guess-btn">
+          <button onclick="makeGuess()"><span>Guess</span></button>
+        </div>
+        <div class="score">
+          <p>Score: <span id="score">0</span></p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="assignment-count-wrapper">
+        <span
+          >Assignment <br />
+          Three</span
+        >
+      </div>
+    </div>
+  </body>
+</html>
