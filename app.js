@@ -10,7 +10,8 @@ function makeGuess() {
   myScore = document.getElementById("score");
   myScreen = document.getElementById("random-number-screen");
   myGuess = document.getElementById("myguess");
-  randomNumberBetweenZeroAndEleven = Math.ceil(Math.random() * 10);
+  n = 10;
+  randomNumberBetweenZeroAndEleven = Math.ceil(Math.random() * (n + 1)) - 1;
   if (myGuess.innerText === "") {
     myScreen.innerText = "Please pick a number";
     myScreen.style.color = "red";
