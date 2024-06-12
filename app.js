@@ -11,15 +11,18 @@ function makeGuess() {
   myScreen = document.getElementById("random-number-screen");
   myGuess = document.getElementById("myguess");
   randomNumberBetweenZeroAndEleven = Math.ceil(Math.random() * 10);
-  if (btnValue === "") {
+  if (myGuess.innerText === "") {
     myScreen.innerText = "Please pick a number";
     myScreen.style.color = "red";
-  } else if (btnValue != "" && randomNumberBetweenZeroAndEleven === btnValue) {
+  } else if (
+    btnValue != null &&
+    randomNumberBetweenZeroAndEleven === btnValue
+  ) {
     myScreen.style.color = "white";
     myScreen.innerText = `You guessed ${btnValue}, you are right🎉🎉!`;
     score++;
     myScore.innerText = score;
-  } else if (btnValue != "" && randomNumberBetweenZeroAndEleven != btnValue) {
+  } else if (btnValue != null && randomNumberBetweenZeroAndEleven != btnValue) {
     myScreen.style.color = "white";
     myScreen.innerText = `You are wrong💔💔! The random number is ${randomNumberBetweenZeroAndEleven}`;
   }
